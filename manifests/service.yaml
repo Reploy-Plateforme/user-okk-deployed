@@ -1,12 +1,12 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{APP_NAME}}-service
+  name: okk-service
   labels:
-    app: {{APP_NAME}}
+    app: okk
 spec:
   selector:
-    app: {{APP_NAME}}
+    app: okk
   ports:
     - protocol: TCP
       port: 80

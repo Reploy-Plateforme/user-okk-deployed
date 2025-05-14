@@ -1,22 +1,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{APP_NAME}}-deployment
+  name: okk-deployment
   labels:
-    app: {{APP_NAME}}
+    app: okk
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: {{APP_NAME}}
+      app: okk
   template:
     metadata:
       labels:
-        app: {{APP_NAME}}
+        app: okk
     spec:
       containers:
-        - name: {{APP_NAME}}-container
-          image: ${{secrets.DOCKER_USERNAME}}/{{APP_NAME}}:{{IMAGE_TAG}}
+        - name: okk-container
+          image: lunix007/user-okk-deployed:b8ccb0fc0b4a01e3f1599cecbd3fa766a15fe053
           ports:
             - containerPort: 80
           resources:
